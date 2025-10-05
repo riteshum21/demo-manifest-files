@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: argocd-nginx
+  name: todo-ui
 spec:
   type: LoadBalancer
   selector:
-    app.kubernetes.io/name: argocd-nginx
+    app: todo-ui
   ports:
-  - port: 80
-
-    targetPort: 80
+    - port: 80
+      targetPort: 80
