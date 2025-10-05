@@ -6,14 +6,14 @@ spec:
   replicas: 10
   selector:
     matchLabels:
-      app: todo-ui
+      app: frontend todo-ui
   template:
     metadata:
       labels:
-        app: todo-ui
+        app: frontend todo-ui
     spec:
       containers:
-      - name: todo-ui
+      - name: frontend todo-ui
         image: ritesh.azurecr.io/fromtendui:v1
         ports:
         - containerPort: 80
